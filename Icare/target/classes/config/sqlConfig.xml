@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="java.lang.String" alias="str" />
+		<typeAlias type="java.lang.Integer" alias="int" />
+		<typeAlias type="icare.dto.AAttachVO" alias="aattach" />
+		<typeAlias type="icare.dto.AdminVO" alias="admin" />
+		<typeAlias type="icare.dto.ApprovalVO" alias="approval" />
+		<typeAlias type="icare.dto.BoardVO" alias="board" />
+		<typeAlias type="icare.dto.BusinessTripVO" alias="businesstrip" />
+		<typeAlias type="icare.dto.ClassVO" alias="class" />
+		<typeAlias type="icare.dto.ContentVO" alias="content" />
+		<typeAlias type="icare.dto.CostVO" alias="cost" />
+		<typeAlias type="icare.dto.CounseilVO" alias="counseil" />
+		<typeAlias type="icare.dto.CourseVO" alias="course" />
+		<typeAlias type="icare.dto.DriverVO" alias="driver" />
+		<typeAlias type="icare.dto.EAttachVO" alias="eattach" />
+		<typeAlias type="icare.dto.EtoolsVO" alias="etools" />
+		<typeAlias type="icare.dto.FieldStudyVO" alias="fieldstudy" />
+		<typeAlias type="icare.dto.GalleryVO" alias="gallery" />
+		<typeAlias type="icare.dto.HomeStudyVO" alias="homestudy" />
+		<typeAlias type="icare.dto.HomeworkDiaryVO" alias="homeworkdiary" />
+		<typeAlias type="icare.dto.KindergartenVO" alias="kinder" />
+		<typeAlias type="icare.dto.MailVO" alias="mail" />
+		<typeAlias type="icare.dto.MenuVO" alias="menu" />
+		<typeAlias type="icare.dto.NonMemVO" alias="nonmem" />
+		<typeAlias type="icare.dto.ParentsVO" alias="parents" />
+		<typeAlias type="icare.dto.PattachVO" alias="pattach" />
+		<typeAlias type="icare.dto.PlaceVO" alias="place" />
+		<typeAlias type="icare.dto.ReadVO" alias="read" />
+		<typeAlias type="icare.dto.ReceiveVO" alias="receive" />
+		<typeAlias type="icare.dto.ReplyVO" alias="reply" />
+		<typeAlias type="icare.dto.SattendVO" alias="sattend" />
+		<typeAlias type="icare.dto.ScheduleVO" alias="schedule" />
+		<typeAlias type="icare.dto.SeatVO" alias="seat" />
+		<typeAlias type="icare.dto.ServItemVO" alias="servitem" />
+		<typeAlias type="icare.dto.SexOffenderVO" alias="sexoffender" />
+		<typeAlias type="icare.dto.StudentVO" alias="student" />
+		<typeAlias type="icare.dto.StudentDiaryVO" alias="studentdiary" />
+		<typeAlias type="icare.dto.StuEvalVO" alias="stueval" />
+		<typeAlias type="icare.dto.SurveyVO" alias="survey" />
+		<typeAlias type="icare.dto.TeacherVO" alias="teacher" />
+		<typeAlias type="icare.dto.ToolsVO" alias="tools" />
+		<typeAlias type="icare.dto.TScheduleVO" alias="tschedule" />
+		<typeAlias type="icare.dto.VacationVO" alias="vacation" />
+		<typeAlias type="icare.dto.WeeklyPlanVO" alias="weeklyplan" />
+		<typeAlias type="icare.dto.WorkingVO" alias="working" />
+		<typeAlias type="icare.dto.StorageVO" alias="storage"/>
+	</typeAliases>
+</configuration>
+
+
+
+
+

@@ -1,0 +1,58 @@
+package icare.employManage.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.ibatis.session.RowBounds;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import icare.commons.Criteria;
+import icare.dto.TeacherVO;
+
+@Repository
+public class EmployManageDAOImpl implements EmployManageDAO{
+	
+	@Autowired
+	private SqlSession session;
+	
+	public void setSqlSession(SqlSession session) {
+		this.session = session;
+	}
+
+	@Override
+	public List<TeacherVO> getEmployList(Criteria cri) throws SQLException {
+		int offset = cri.getPageStartRowNum();
+		int limit = cri.getPerPageNum();
+		
+		RowBounds rowbounds = new RowBounds(offset, limit);
+		
+		List<TeacherVO> employList = session.selectList("Employ-Mapper.selectEmployList", cri, rowbounds);
+		return employList;
+	}
+
+	@Override
+	public int getTotalCount(Criteria cri) throws SQLException {
+		int offset = cri.getPageStartRowNum();
+		int limit = cri.getPerPageNum();
+		
+		RowBounds rowbounds = new RowBounds(offset,limit);
+
+		int totalCount = session.selectOne("Employ-Mapper.getTotalCount",cri);
+		
+		return totalCount;
+	}
+
+	@Override
+	public void insertTeacher(TeacherVO teacher) throws SQLException {
+		session.update("Employ-Mapper.insertTeacher",teacher);
+	}
+
+	@Override
+	public TeacherVO getTeacher(String tid) {	
+		TeacherVO teacher = session.selectOne("Employ-Mapper.getTeacher", tid);
+		return teacher;
+	}
+	
+}

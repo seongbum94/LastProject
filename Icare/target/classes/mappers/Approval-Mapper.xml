@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Approval-Mapper">
+
+	<sql id="search">
+      <if test="searchType == 't'.toString()">
+         and title like '%'||#{keyword}||'%'
+      </if>
+      <if test="searchType == 'y'.toString()">
+			and type like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'ty'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			type like '%'||#{keyword}||'%'						
+			)			
+		</if>
+   </sql>
+	
+	<!-- 내역조회  -->
+	<select id="selectApprovalCriteria" resultType="approval">
+		select * 
+  		  from (select * 
+		          from approval 
+		         where tid = #{tid}
+		           and stts = 'approval')
+ 		 where eno is not null 
+ 		   and type='week' or type = 'etools'
+		 <include refid="search"/>
+      	 order by eno desc
+	</select>
+	<!-- 내역조회  -->
+	<select id="selectApprovalCriteriaCount" resultType="int">
+      select count(*) 
+  		  from (select * 
+		          from approval 
+		         where tid = #{tid}
+		           and stts = 'approval')
+ 		 where eno is not null 
+ 		   and type='week' or type = 'etools'
+		 <include refid="search"/>
+      	 order by eno desc
+     </select>
+     
+     <!-- 등록 -->
+     <update id="insertApproval" parameterType="approval">
+     	
+     </update>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+</mapper>
+
+
+
+

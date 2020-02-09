@@ -1,0 +1,105 @@
+package icare.dto;
+
+import java.util.Date;
+
+/**
+ * 메일
+ * @author YSB
+ */
+public class MailVO {
+	private int eno;				//메일번호
+	private String content;         //내용
+	private String bookmark;        //중요메일
+	private String del;             //삭제여부
+	private String title;           //제목
+	private Date senddate;        //발송일
+	private String temp;            //임시저장여부
+	private String tid;                //발신인교번
+
+	public MailVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MailVO(int eno, String content, String bookmark, String del, String title, Date senddate, String temp,
+			String tid) {
+		super();
+		this.eno = eno;
+		this.content = content;
+		this.bookmark = bookmark;
+		this.del = del;
+		this.title = title;
+		this.senddate = senddate;
+		this.temp = temp;
+		this.tid = tid;
+	}
+
+	public int getEno() {
+		return eno;
+	}
+
+	public void setEno(int eno) {
+		this.eno = eno;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getBookmark() {
+		return bookmark;
+	}
+
+	public void setBookmark(String bookmark) {
+		this.bookmark = bookmark;
+	}
+
+	public String getDel() {
+		return del;
+	}
+
+	public void setDel(String del) {
+		this.del = del;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Date getSenddate() {
+		return senddate;
+	}
+
+	public void setSenddate(Date senddate) {
+		this.senddate = senddate;
+	}
+
+	public String getTemp() {
+		return temp;
+	}
+
+	public void setTemp(String temp) {
+		this.temp = temp;
+	}
+
+	public String getTid() {
+		return tid;
+	}
+
+	public void setTid(String tid) {
+		this.tid = tid;
+	}
+
+	@Override
+	public String toString() {
+		return "MailVO [eno=" + eno + ", content=" + content + ", bookmark=" + bookmark + ", del=" + del + ", title="
+				+ title + ", senddate=" + senddate + ", temp=" + temp + ", tid=" + tid + "]";
+	}
+}

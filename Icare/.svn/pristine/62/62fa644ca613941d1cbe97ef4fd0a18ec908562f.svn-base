@@ -1,0 +1,85 @@
+package icare.dto;
+
+import java.util.Date;
+
+/**
+ * 식단정보가 담긴 VO
+ * @author LMY
+ *
+ */
+public class MenuVO {
+	private String mno;	//식단번호
+	private String uploadpath;	//업로드경로
+	private String imgtype;	//사진타입
+	private String imgname;	//사진이름
+	private Date mdate;	//날짜
+	private String kid;	//유치원번호
+	
+	public MenuVO() {
+	}
+
+	public MenuVO(String mno, String uploadpath, String imgtype, String imgname, Date mdate, String kid) {
+		super();
+		this.mno = mno;
+		this.uploadpath = uploadpath;
+		this.imgtype = imgtype;
+		this.imgname = imgname;
+		this.mdate = mdate;
+		this.kid = kid;
+	}
+
+	public String getMno() {
+		return mno;
+	}
+
+	public void setMno(String mno) {
+		this.mno = mno;
+	}
+
+	public String getUploadpath() {
+		return uploadpath;
+	}
+
+	public void setUploadpath(String uploadpath) {
+		this.uploadpath = uploadpath;
+	}
+
+	public String getImgtype() {
+		return imgtype;
+	}
+
+	public void setImgtype(String imgtype) {
+		this.imgtype = imgtype;
+	}
+
+	public String getImgname() {
+		return imgname;
+	}
+
+	public void setImgname(String imgname) {
+		this.imgname = imgname;
+	}
+
+	public Date getMdate() {
+		return mdate;
+	}
+
+	public void setMdate(Date mdate) {
+		this.mdate = mdate;
+	}
+
+	public String getKid() {
+		return kid;
+	}
+
+	public void setKid(String kid) {
+		this.kid = kid;
+	}
+
+	@Override
+	public String toString() {
+		return "MenuVO [mno=" + mno + ", uploadpath=" + uploadpath + ", imgtype=" + imgtype + ", imgname=" + imgname
+				+ ", mdate=" + mdate + ", kid=" + kid + "]";
+	}
+	
+}

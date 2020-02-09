@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Tools-Mapper"> 
+	
+		<sql id="search">
+		<if test="searchType == 't'.toString()">
+			and tsno like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'n'.toString()">
+			and name like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'g'.toString()">
+			and gubun like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'tg'.toString()">
+			and (
+			tsno like '%'||#{keyword}||'%'
+			or
+			gubun like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'gn'.toString()">
+			and (
+			gubun like '%'||#{keyword}||'%'
+			or
+			name like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'tng'.toString()">
+			and (
+			tsno like '%'||#{keyword}||'%'
+			or
+			name like '%'||#{keyword}||'%'
+			or
+			gubun like '%'||#{keyword}||'%'						
+			)			
+		</if>
+	</sql>
+	
+	<select id="selectSearchToolsList"
+			parameterType="icare.commons.Criteria"
+			resultType="tools">
+			
+		select * from tools where tsno is not null
+		<include refid="search" />
+		order by tsno desc
+	</select>
+	
+	<select id="selectSearchToolsListCount"
+			parameterType="icare.commons.Criteria"
+			resultType="int">
+		
+		select count(*) from tools where tsno is not null
+		<include refid="search" />
+		order by tsno desc
+	</select>
+	
+	<select id="selectToolsList" resultType="tools">
+		select * from tools order by tsno desc
+	</select>
+	
+	<select id="selectToolsByTsno" resultType="tools">
+		select * from tools where tsno=#{tsno}
+	</select>
+	
+	<update id="insertTools" parameterType="tools">
+		insert into tools(tsno,qntty,name,gubun,cno)
+		values(tools_seq.nextval, #{qntty}, #{name}, #{gubun}, #{cno})
+	</update>
+	
+	<update id="updateTools" parameterType="tools">
+		update tools 
+		   set qntty=#{qntty}, name=#{name}, gubun=#{gubun}, cno=#{cno}
+		 where tsno=#{tsno}
+	</update>
+	
+	<update id="deleteTools" parameterType="tools">
+		delete from tools where tsno=#{tsno}
+	</update>
+	
+</mapper>

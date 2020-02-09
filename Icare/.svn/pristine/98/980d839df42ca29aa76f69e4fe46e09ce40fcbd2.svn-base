@@ -1,0 +1,74 @@
+package icare.dto;
+
+import java.util.Date;
+
+/**
+ * 출장신청서
+ * @author YSB
+ */
+public class BusinessTripVO {
+	private String eno;			//문서번호
+	private Date startdate;	    //출장시작일
+	private Date enddate;		//출장종료일
+	private String transport;	//교통수단
+	private String dest;		//출장지
+
+	public BusinessTripVO() {
+	}
+
+	public BusinessTripVO(String eno, Date startdate, Date enddate, String transport, String dest) {
+		super();
+		this.eno = eno;
+		this.startdate = startdate;
+		this.enddate = enddate;
+		this.transport = transport;
+		this.dest = dest;
+	}
+
+	public String getEno() {
+		return eno;
+	}
+
+	public void setEno(String eno) {
+		this.eno = eno;
+	}
+
+	public Date getStartdate() {
+		return startdate;
+	}
+
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+
+	public Date getEnddate() {
+		return enddate;
+	}
+
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+
+	public String getTransport() {
+		return transport;
+	}
+
+	public void setTransport(String transport) {
+		this.transport = transport;
+	}
+
+	public String getDest() {
+		return dest;
+	}
+
+	public void setDest(String dest) {
+		this.dest = dest;
+	}
+
+	@Override
+	public String toString() {
+		return "BusinessTripVO [eno=" + eno + ", startdate=" + startdate + ", enddate=" + enddate + ", transport="
+				+ transport + ", dest=" + dest + "]";
+	}
+	
+}

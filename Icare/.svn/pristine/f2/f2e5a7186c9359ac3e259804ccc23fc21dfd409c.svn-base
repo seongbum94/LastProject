@@ -1,0 +1,42 @@
+package icare.dto;
+
+
+/**
+ * 코스
+ * @author YSB
+ */
+public class CourseVO {
+	private String courseno;		//코스번호
+	private String drno;			//기사번호
+	
+	public CourseVO() {
+	}
+
+	public CourseVO(String courseno, String drno) {
+		super();
+		this.courseno = courseno;
+		this.drno = drno;
+	}
+
+	public String getCourseno() {
+		return courseno;
+	}
+
+	public void setCourseno(String courseno) {
+		this.courseno = courseno;
+	}
+
+	public String getDrno() {
+		return drno;
+	}
+
+	public void setDrno(String drno) {
+		this.drno = drno;
+	}
+
+	@Override
+	public String toString() {
+		return "CourseVO [courseno=" + courseno + ", drno=" + drno + "]";
+	}
+	
+}

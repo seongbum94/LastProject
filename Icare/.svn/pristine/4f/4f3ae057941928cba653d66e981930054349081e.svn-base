@@ -1,0 +1,95 @@
+package icare.dto;
+
+import java.util.Date;
+
+/**
+ * 가정학습신청서
+ * @author a1938
+ */
+public class HomeStudyVO {
+	private String hsno;			 //신청번호
+	private String subject;      //주제
+	private Date dest;           //장소
+	private Date startdate;      //시작날짜
+	private Date enddate;        //날짜
+	private String content;      //내용
+	private String sno;          //원생번호
+	
+	public HomeStudyVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public HomeStudyVO(String hsno, String subject, Date dest, Date startdate, Date enddate, String content,
+			String sno) {
+		super();
+		this.hsno = hsno;
+		this.subject = subject;
+		this.dest = dest;
+		this.startdate = startdate;
+		this.enddate = enddate;
+		this.content = content;
+		this.sno = sno;
+	}
+
+	public String getHsno() {
+		return hsno;
+	}
+
+	public void setHsno(String hsno) {
+		this.hsno = hsno;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public Date getDest() {
+		return dest;
+	}
+
+	public void setDest(Date dest) {
+		this.dest = dest;
+	}
+
+	public Date getStartdate() {
+		return startdate;
+	}
+
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+
+	public Date getEnddate() {
+		return enddate;
+	}
+
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getSno() {
+		return sno;
+	}
+
+	public void setSno(String sno) {
+		this.sno = sno;
+	}
+
+	@Override
+	public String toString() {
+		return "HomeStudyVO [hsno=" + hsno + ", subject=" + subject + ", dest=" + dest + ", startdate=" + startdate
+				+ ", enddate=" + enddate + ", content=" + content + ", sno=" + sno + "]";
+	}
+}

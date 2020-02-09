@@ -1,0 +1,62 @@
+package icare.dto;
+
+/**
+ * 설문조사 항목
+ * @author LMY
+ *
+ */
+public class ServItemVO {
+	private int ino;	//항목번호
+	private String content;	//내용
+	private int score;	//점수
+	private int servno;	//설문조사번호
+	
+	public ServItemVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ServItemVO(int ino, String content, int score, int servno) {
+		super();
+		this.ino = ino;
+		this.content = content;
+		this.score = score;
+		this.servno = servno;
+	}
+
+	public int getIno() {
+		return ino;
+	}
+
+	public void setIno(int ino) {
+		this.ino = ino;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public int getServno() {
+		return servno;
+	}
+
+	public void setServno(int servno) {
+		this.servno = servno;
+	}
+
+	@Override
+	public String toString() {
+		return "ServItemVO [ino=" + ino + ", content=" + content + ", score=" + score + ", servno=" + servno + "]";
+	}
+}

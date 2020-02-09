@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="Parents-Mapper">
+  
+  	<select id="selectParentsById" parameterType="str" resultType="parents">
+  		select * from parents where pid = #{pid}
+  	</select>
+  
+  </mapper>

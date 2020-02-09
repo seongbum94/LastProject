@@ -1,0 +1,63 @@
+package icare.dto;
+
+import java.util.Date;
+
+/**
+ * 좌석
+ * @author LMY
+ *
+ */
+public class SeatVO {
+	private Date time;	//시간
+	private String sno;		//원생번호
+	private String drno;		//기사번호
+	private String seatno;		//좌석번호
+	
+	public SeatVO() {
+	}
+
+	public SeatVO(Date time, String sno, String drno, String seatno) {
+		super();
+		this.time = time;
+		this.sno = sno;
+		this.drno = drno;
+		this.seatno = seatno;
+	}
+
+	public Date getTime() {
+		return time;
+	}
+
+	public void setTime(Date time) {
+		this.time = time;
+	}
+
+	public String getSno() {
+		return sno;
+	}
+
+	public void setSno(String sno) {
+		this.sno = sno;
+	}
+
+	public String getDrno() {
+		return drno;
+	}
+
+	public void setDrno(String drno) {
+		this.drno = drno;
+	}
+
+	public String getSeatno() {
+		return seatno;
+	}
+
+	public void setSeatno(String seatno) {
+		this.seatno = seatno;
+	}
+
+	@Override
+	public String toString() {
+		return "SeatVO [time=" + time + ", sno=" + sno + ", drno=" + drno + ", seatno=" + seatno + "]";
+	}
+}
